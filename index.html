@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albertus Kevin - Portfolio Profesional</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #17a2b8;
+            --accent-color: #dc3545;
+            --background-color: #f4f6f9;
+            --text-color: #2c3e50;
+            --card-bg: #ffffff;
+            --gradient-primary: linear-gradient(135deg, #007bff, #17a2b8);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .hero {
+            background: var(--gradient-primary);
+            color: white;
+            text-align: center;
+            padding: 6rem 2rem;
+            border-radius: 15px;
+            position: relative;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero p {
+            font-size: 1.6rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            margin-bottom: 2.5rem;
+            transition: all 0.4s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .card-header {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-item {
+            background: var(--background-color);
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: var(--accent-color);
+            transition: width 0.3s ease;
+            z-index: 0;
+        }
+
+        .skill-item:hover::before {
+            width: 100%;
+        }
+
+        .skill-item:hover {
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .skill-item span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: var(--background-color);
+            padding: 1.25rem 1.75rem;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            width: 300px;
+            text-decoration: none;
+            color: var(--text-color);
+        }
+
+        .contact-item:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-5px);
+        }
+
+        footer {
+            background: var(--gradient-primary);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+
+            .hero p {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Albertus Kevin</h1>
+                <p>Desainer & Software Engineer Muda dengan Kreativitas Inovatif</p>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-user-circle"></i>
+                <h2>&nbsp;Tentang Saya</h2>
+            </div>
+            <div class="card-content">
+                <p>Seorang remaja berbakat yang memadukan kreativitas desain dengan keterampilan teknis dalam
+                    pengembangan perangkat lunak. Dengan semangat belajar yang tinggi, saya terus mengembangkan
+                    kemampuan untuk menghasilkan solusi digital yang inovatif dan menginspirasi.</p>
+            </div>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-code"></i>
+                <h2>&nbsp;Keterampilan</h2>
+            </div>
+            <div class="card-content skills-grid">
+                <div class="skill-item">
+                    <span>Desain Grafis</span>
+                </div>
+                <div class="skill-item">
+                    <span>Pengembangan Web</span>
+                </div>
+                <div class="skill-item">
+                    <span>Software Engineering</span>
+                </div>
+                <div class="skill-item">
+                    <span>Prototyping</span>
+                </div>
+                <div class="skill-item">
+                    <span>UI/UX Design</span>
+                </div>
+                <div class="skill-item">
+                    <span>Word,Excel,Powerpoint</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-envelope-open-text"></i>
+                <h2>&nbsp;Kontak</h2>
+            </div>
+            <div class="card-content contact-info">
+                <a href="mailto:vinntoria10@gmail.com" class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>vinntoria10@gmail.com</span>
+                </a>
+                <a href="https://instagram.com/vinn_2010_" target="_blank" class="contact-item">
+                    <i class="fab fa-instagram"></i>
+                    <span>vinn_2010_</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Footer Section -->
+        <footer>
+            <p>&copy; 2024 Albertus Kevin. Semua Hak Cipta Dilindungi.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
